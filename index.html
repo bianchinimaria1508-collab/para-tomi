@@ -10,23 +10,19 @@ content="width=device-width, initial-scale=1.0">
 
 <title>Para Tomi 💜</title>
 
-
 <style>
 
-/* =========================
+/* =====================================================
    GENERAL
-   ========================= */
+   ===================================================== */
 
 * {
   box-sizing: border-box;
 }
 
 body {
-
   margin: 0;
-
   min-height: 100vh;
-
   overflow: hidden;
 
   font-family:
@@ -34,50 +30,50 @@ body {
     monospace;
 
   background: #f8c9dc;
+}
 
+button {
+  font-family:
+    "Courier New",
+    monospace;
 }
 
 
-/* =========================
+/* =====================================================
    ESCENAS
-   ========================= */
+   ===================================================== */
 
 .scene {
-
   position: relative;
-
   width: 100%;
-
   height: 100vh;
-
 }
 
 
-/* =========================
+/* =====================================================
    PANTALLA PRINCIPAL
-   ========================= */
+   ===================================================== */
 
 .main {
-
   position: absolute;
-
   inset: 0;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
 
+  background:
+    radial-gradient(
+      circle at center,
+      #fbdce9,
+      #f4bfd6
+    );
 }
 
-
 .title {
-
   margin-bottom: 28px;
 
   color: #74458f;
@@ -87,22 +83,16 @@ body {
 
   text-shadow:
     3px 3px 0 #f0aeca;
-
 }
 
-
 .button {
+  border: 4px solid #6b3d8d;
 
-  border:
-    4px solid #6b3d8d;
-
-  background:
-    #9b68c7;
+  background: #9b68c7;
 
   color: white;
 
-  padding:
-    18px 26px;
+  padding: 18px 26px;
 
   cursor: pointer;
 
@@ -112,43 +102,35 @@ body {
     monospace;
 
   box-shadow:
-    6px 6px 0
-    #6b3d8d;
+    6px 6px 0 #6b3d8d;
 
+  transition:
+    transform .1s;
 }
 
-
 .button:active {
-
   transform:
     translate(5px, 5px);
 
   box-shadow:
-    1px 1px 0
-    #6b3d8d;
-
+    1px 1px 0 #6b3d8d;
 }
 
-
 .hint {
-
   margin-top: 24px;
 
   color: #8d5b78;
 
   font-size: 13px;
-
 }
 
 
-/* =========================
+/* =====================================================
    POPUPS
-   ========================= */
+   ===================================================== */
 
 .overlay {
-
   position: fixed;
-
   inset: 0;
 
   background:
@@ -157,34 +139,25 @@ body {
   display: none;
 
   align-items: center;
-
   justify-content: center;
 
   padding: 20px;
 
   z-index: 20;
-
 }
-
 
 .overlay.show {
-
   display: flex;
-
 }
 
-
 .popup {
-
   width:
     min(620px, 94vw);
 
-  background:
-    #fff2f7;
+  background: #fff2f7;
 
   border:
-    4px solid
-    #60416f;
+    4px solid #60416f;
 
   box-shadow:
     10px 10px 0
@@ -192,43 +165,32 @@ body {
 
   animation:
     pop .18s steps(2);
-
 }
 
-
 .bar {
-
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   padding: 8px 10px;
 
-  background:
-    #9b68c7;
+  background: #9b68c7;
 
   color: white;
 
   border-bottom:
-    4px solid
-    #60416f;
+    4px solid #60416f;
 
   font-weight: bold;
-
 }
 
-
 .close {
-
   width: 27px;
-
   height: 25px;
 
   border:
-    3px solid
-    #60416f;
+    3px solid #60416f;
 
   background:
     #f6c5d9;
@@ -242,12 +204,9 @@ body {
     monospace;
 
   cursor: pointer;
-
 }
 
-
 .content {
-
   padding:
     30px 25px 25px;
 
@@ -255,61 +214,36 @@ body {
     #5f4666;
 
   text-align: center;
-
 }
 
-
 .tiny-heart {
-
   font-size: 42px;
 
   margin-bottom: 15px;
-
 }
 
-
 .message {
-
   font-size:
     clamp(16px, 3.5vw, 22px);
 
   line-height: 1.6;
 
   font-weight: bold;
-
 }
-
 
 .secondMessage {
-
   font-size:
     clamp(14px, 3vw, 18px);
-
 }
-
-
-.footer {
-
-  margin-top: 24px;
-
-  color:
-    #a06c8c;
-
-  font-size: 12px;
-
-}
-
 
 .nextButton {
-
   margin-top: 28px;
 
   padding:
     13px 18px;
 
   border:
-    3px solid
-    #70458e;
+    3px solid #70458e;
 
   background:
     #f2b8d0;
@@ -325,338 +259,251 @@ body {
   cursor: pointer;
 
   box-shadow:
-    4px 4px 0
-    #70458e;
-
+    4px 4px 0 #70458e;
 }
 
 
-/* =========================
+/* =====================================================
    GATITA
-   ========================= */
+   ===================================================== */
 
 .kittyArea {
-
-  position: relative;
-
   height: 170px;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
-
 }
 
-
 .kitty {
-
   position: relative;
 
   width: 120px;
-
   height: 145px;
 
   animation:
     kittyDance .8s steps(2)
     infinite;
-
 }
 
-
 .kittyHead {
-
   position: absolute;
 
   width: 100px;
-
   height: 82px;
 
   left: 10px;
-
   top: 22px;
 
   background:
     #fffdfd;
 
   border:
-    4px solid
-    #5d4964;
+    4px solid #5d4964;
 
   border-radius:
     45% 45% 42% 42%;
-
 }
 
-
 .ear {
-
   position: absolute;
 
   width: 35px;
-
   height: 35px;
 
   background:
     #fffdfd;
 
   border:
-    4px solid
-    #5d4964;
+    4px solid #5d4964;
 
   top: 10px;
-
 }
 
-
 .leftEar {
-
   left: 17px;
 
   transform:
     rotate(-30deg);
-
 }
 
-
 .rightEar {
-
   right: 17px;
 
   transform:
     rotate(30deg);
-
 }
 
-
 .eye {
-
   position: absolute;
 
   width: 7px;
-
   height: 11px;
 
   background:
     #3e3045;
 
   top: 39px;
-
 }
-
 
 .leftEye {
   left: 27px;
 }
 
-
 .rightEye {
   right: 27px;
 }
 
-
 .nose {
-
   position: absolute;
 
   width: 8px;
-
   height: 6px;
 
   background:
     #e7a83f;
 
   top: 51px;
-
   left: 42px;
-
 }
 
-
 .kittyHead::before {
-
   content: "";
 
   position: absolute;
 
   left: -15px;
-
   top: 48px;
 
   width: 20px;
-
   height: 3px;
 
   background:
     #5d4964;
 
   box-shadow:
-    0 9px 0
-    #5d4964;
-
+    0 9px 0 #5d4964;
 }
 
-
 .kittyHead::after {
-
   content: "";
 
   position: absolute;
 
   right: -15px;
-
   top: 48px;
 
   width: 20px;
-
   height: 3px;
 
   background:
     #5d4964;
 
   box-shadow:
-    0 9px 0
-    #5d4964;
-
+    0 9px 0 #5d4964;
 }
 
-
 .bow {
-
   position: absolute;
 
   width: 25px;
-
   height: 23px;
 
   background:
     #ed91b5;
 
   border:
-    3px solid
-    #8d4f70;
+    3px solid #8d4f70;
 
   top: -10px;
-
 }
 
-
 .leftBow {
-
   right: -18px;
 
   transform:
     rotate(-15deg);
-
 }
 
-
 .rightBow {
-
   right: -35px;
 
   transform:
     rotate(15deg);
-
 }
 
-
 .bowCenter {
-
   position: absolute;
 
   width: 12px;
-
   height: 12px;
 
   background:
     #f5b5cc;
 
   border:
-    3px solid
-    #8d4f70;
+    3px solid #8d4f70;
 
   top: -4px;
-
   right: -27px;
-
 }
 
-
 .kittyBody {
-
   position: absolute;
 
   width: 58px;
-
   height: 55px;
 
   left: 31px;
-
   top: 98px;
 
   background:
     #fffdfd;
 
   border:
-    4px solid
-    #5d4964;
+    4px solid #5d4964;
 
   border-radius:
     35% 35% 25% 25%;
-
 }
 
-
 .paw {
-
   position: absolute;
 
   width: 25px;
-
   height: 17px;
 
   background:
     #fffdfd;
 
   border:
-    4px solid
-    #5d4964;
+    4px solid #5d4964;
 
   top: 130px;
-
 }
 
-
 .leftPaw {
-
   left: 21px;
 
   transform:
     rotate(20deg);
-
 }
 
-
 .rightPaw {
-
   right: 21px;
 
   transform:
     rotate(-20deg);
-
 }
 
 
-/* =========================
+/* =====================================================
    JARDÍN
-   ========================= */
+   ===================================================== */
 
 .garden {
-
   position: fixed;
-
   inset: 0;
 
   display: none;
@@ -665,27 +512,136 @@ body {
 
   background:
     linear-gradient(
-      #f5c9df 0%,
-      #f9d9e8 60%,
-      #b8d6a3 60%,
-      #9fc28d 100%
+      #f7cfe2 0%,
+      #f9dbe9 54%,
+      #c6dda8 54%,
+      #a9cc91 100%
     );
-
 }
-
 
 .garden.show {
-
   display: block;
-
 }
 
 
-.gardenTitle {
+/* =====================================================
+   LUCES Y ESTRELLAS
+   ===================================================== */
 
+.sparkle {
   position: absolute;
 
-  top: 35px;
+  color:
+    #fff8fc;
+
+  font-size:
+    18px;
+
+  pointer-events: none;
+
+  animation:
+    sparkleFloat 3s
+    ease-in-out
+    infinite;
+}
+
+.s1 {
+  left: 10%;
+  top: 20%;
+}
+
+.s2 {
+  left: 25%;
+  top: 35%;
+
+  animation-delay:
+    .7s;
+}
+
+.s3 {
+  right: 18%;
+  top: 22%;
+
+  animation-delay:
+    1.2s;
+}
+
+.s4 {
+  right: 30%;
+  top: 38%;
+
+  animation-delay:
+    1.8s;
+}
+
+.s5 {
+  left: 70%;
+  top: 15%;
+
+  animation-delay:
+    .4s;
+}
+
+
+/* =====================================================
+   CORAZONES
+   ===================================================== */
+
+.floatingHeart {
+  position: absolute;
+
+  color:
+    #ef9fbd;
+
+  font-size:
+    20px;
+
+  pointer-events: none;
+
+  animation:
+    heartFloat 4s
+    ease-in-out
+    infinite;
+}
+
+.h1 {
+  left: 18%;
+  bottom: 35%;
+}
+
+.h2 {
+  right: 15%;
+  bottom: 40%;
+
+  animation-delay:
+    1s;
+}
+
+.h3 {
+  left: 40%;
+  bottom: 28%;
+
+  animation-delay:
+    2s;
+}
+
+.h4 {
+  right: 38%;
+  bottom: 32%;
+
+  animation-delay:
+    .5s;
+}
+
+
+/* =====================================================
+   TÍTULO DEL JARDÍN
+   ===================================================== */
+
+.gardenTitle {
+  position: absolute;
+
+  top: 30px;
 
   width: 100%;
 
@@ -695,488 +651,577 @@ body {
     #74458f;
 
   font-size:
-    clamp(16px,4vw,25px);
+    clamp(16px, 4vw, 25px);
 
   text-shadow:
-    3px 3px 0
-    #f0aeca;
+    3px 3px 0 #f0aeca;
 
+  z-index: 5;
 }
 
 
-/* Pastito */
+/* =====================================================
+   SUELO
+   ===================================================== */
 
 .grass {
-
   position: absolute;
 
   bottom: 0;
 
   width: 100%;
 
-  height: 40%;
+  height: 46%;
 
   background:
-    #9fc28d;
+    #a9cc91;
 
   border-top:
-    5px solid
-    #71915e;
-
+    5px solid #789963;
 }
 
 
-/* Flores decorativas */
+/* =====================================================
+   FLORES PEQUEÑAS
+   ===================================================== */
 
-.flower {
-
+.smallFlower {
   position: absolute;
 
-  font-size: 35px;
+  font-size:
+    30px;
 
   animation:
     flowerFloat 3s
     ease-in-out
     infinite;
-
 }
 
-
-.f1 {
-  left: 10%;
+.sf1 {
+  left: 8%;
   bottom: 20%;
 }
 
-.f2 {
-  right: 12%;
-  bottom: 25%;
-  animation-delay: .7s;
+.sf2 {
+  right: 9%;
+  bottom: 23%;
+
+  animation-delay:
+    .8s;
 }
 
-.f3 {
-  left: 25%;
-  bottom: 10%;
-  animation-delay: 1s;
+.sf3 {
+  left: 27%;
+  bottom: 12%;
+
+  animation-delay:
+    1.3s;
 }
 
-.f4 {
-  right: 30%;
+.sf4 {
+  right: 27%;
   bottom: 15%;
-  animation-delay: 1.5s;
+
+  animation-delay:
+    1.8s;
 }
 
 
-/* =========================
+/* =====================================================
    CAPULLO
-   ========================= */
+   ===================================================== */
 
 .bud {
-
   position: absolute;
 
-  width: 70px;
-
-  height: 90px;
+  width: 110px;
+  height: 150px;
 
   cursor: pointer;
 
-  z-index: 5;
+  z-index: 8;
 
   transition:
-    left .35s ease,
-    top .35s ease;
+    left .5s ease,
+    top .5s ease;
 
+  transform:
+    translate(-50%, -50%);
 }
 
 
 /* tallo */
 
 .stem {
-
   position: absolute;
 
-  width: 8px;
-
-  height: 55px;
+  width: 9px;
+  height: 80px;
 
   background:
-    #648a55;
+    #628d55;
 
   bottom: 0;
 
-  left: 31px;
+  left: 50%;
 
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    5px;
 }
 
 
 /* hojas */
 
 .leaf {
-
   position: absolute;
 
-  width: 28px;
-
-  height: 14px;
+  width: 45px;
+  height: 21px;
 
   background:
-    #7da967;
+    #7ca966;
 
   border:
-    3px solid
-    #557746;
+    4px solid #56794a;
 
-  bottom: 18px;
+  bottom: 22px;
 
+  border-radius:
+    100% 0 100% 0;
 }
 
-
 .leafLeft {
-
-  left: 5px;
+  left: 3px;
 
   transform:
     rotate(25deg);
+}
 
+.leafRight {
+  right: 3px;
+
+  transform:
+    scaleX(-1)
+    rotate(25deg);
 }
 
 
-.leafRight {
+/* pétalos */
 
-  right: 5px;
+.petal {
+  position: absolute;
+
+  width: 42px;
+  height: 72px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #c978a3,
+      #eea9c8
+    );
+
+  border:
+    4px solid #8b4d71;
+
+  top: 10px;
+
+  border-radius:
+    70% 70% 45% 45%;
+}
+
+.petal.left {
+  left: 13px;
 
   transform:
     rotate(-25deg);
-
 }
 
+.petal.center {
+  left: 34px;
 
-/* pétalos cerrados */
+  z-index: 3;
+}
 
-.petal {
+.petal.right {
+  right: 13px;
 
+  transform:
+    rotate(25deg);
+}
+
+.budTop {
   position: absolute;
 
-  width: 28px;
-
-  height: 45px;
+  width: 48px;
+  height: 48px;
 
   background:
-    #d986ad;
+    #d985ae;
 
   border:
-    4px solid
-    #8d5274;
+    4px solid #8b4d71;
 
-  top: 0;
+  border-radius:
+    50% 50% 40% 40%;
 
+  left: 31px;
+  top: 2px;
+
+  z-index: 5;
 }
 
 
-.petal1 {
-
-  left: 10px;
-
-  transform:
-    rotate(-18deg);
-
-}
-
-
-.petal2 {
-
-  left: 21px;
-
-  z-index: 2;
-
-}
-
-
-.petal3 {
-
-  left: 32px;
-
-  transform:
-    rotate(18deg);
-
-}
-
-
-/* =========================
+/* =====================================================
    FLOR ABIERTA
-   ========================= */
+   ===================================================== */
 
-.bud.open {
-
+.bud.blooming {
   animation:
-    bloom .8s
+    bloom .9s
     ease forwards;
-
 }
 
-
-.bud.open .petal {
-
-  background:
-    #f2a9c7;
-
-}
-
-
-.bud.open .petal1 {
-
+.bud.blooming .budTop {
   transform:
-    rotate(-45deg)
-    translate(-10px,-5px);
+    translateY(-35px)
+    scale(.6);
 
+  opacity: .8;
+
+  transition:
+    all .7s ease;
 }
 
-
-.bud.open .petal2 {
-
+.bud.blooming .petal.left {
   transform:
-    translateY(-15px)
-    scale(1.15);
+    rotate(-60deg)
+    translate(-18px, -18px)
+    scale(1.05);
 
+  transition:
+    all .8s ease;
 }
 
-
-.bud.open .petal3 {
-
+.bud.blooming .petal.center {
   transform:
-    rotate(45deg)
-    translate(10px,-5px);
+    translateY(-28px)
+    scale(1.12);
 
+  transition:
+    all .8s ease;
 }
 
+.bud.blooming .petal.right {
+  transform:
+    rotate(60deg)
+    translate(18px, -18px)
+    scale(1.05);
 
-.flowerCenter {
+  transition:
+    all .8s ease;
+}
 
+.flowerCore {
   position: absolute;
 
-  width: 18px;
-
-  height: 18px;
+  width: 25px;
+  height: 25px;
 
   border-radius: 50%;
 
   background:
-    #ffd77d;
+    #ffd875;
 
   border:
-    3px solid
-    #aa7b35;
+    4px solid #aa7833;
 
-  top: 18px;
+  left: 42px;
+  top: 35px;
 
-  left: 26px;
+  z-index: 10;
 
-  display: none;
+  opacity: 0;
 
-  z-index: 4;
+  transition:
+    opacity .8s ease;
+}
 
+.bud.blooming .flowerCore {
+  opacity: 1;
 }
 
 
-.bud.open .flowerCenter {
+/* =====================================================
+   CONTADOR
+   ===================================================== */
 
-  display: block;
+.counter {
+  position: absolute;
 
+  bottom: 25px;
+
+  width: 100%;
+
+  text-align: center;
+
+  color:
+    #76546b;
+
+  font-size:
+    13px;
+
+  z-index: 9;
 }
 
 
-/* =========================
-   MENSAJE FINAL
-   ========================= */
+/* =====================================================
+   MENSAJE MÁGICO
+   ===================================================== */
 
 .finalMessage {
-
   position: absolute;
 
   left: 50%;
-
-  top: 55%;
+  top: 50%;
 
   transform:
-    translate(-50%,-50%);
+    translate(-50%, -50%)
+    scale(.8);
 
   width:
-    min(650px,88vw);
+    min(650px, 88vw);
 
   padding:
-    25px;
+    30px;
 
   background:
-    rgba(255,242,247,.95);
+    rgba(255, 244, 249, .95);
 
   border:
-    4px solid
-    #8d5274;
+    4px solid #a45c82;
 
   box-shadow:
-    8px 8px 0
-    rgba(96,65,111,.4);
+    0 0 30px
+    rgba(255,255,255,.8),
+    10px 10px 0
+    rgba(96,65,111,.25);
 
   color:
     #60416f;
 
-  text-align: center;
+  text-align:
+    center;
 
-  font-weight: bold;
-
-  line-height: 1.6;
+  line-height:
+    1.7;
 
   font-size:
-    clamp(14px,3vw,19px);
+    clamp(14px, 3vw, 19px);
 
-  opacity: 0;
+  font-weight:
+    bold;
 
-  pointer-events: none;
+  opacity:
+    0;
+
+  pointer-events:
+    none;
 
   transition:
-    opacity .8s
-    ease;
+    opacity 1.2s ease,
+    transform 1.2s ease;
 
+  z-index:
+    30;
 }
-
 
 .finalMessage.show {
+  opacity:
+    1;
 
-  opacity: 1;
-
+  transform:
+    translate(-50%, -50%)
+    scale(1);
 }
 
 
-/* =========================
+/* =====================================================
+   PARTÍCULAS
+   ===================================================== */
+
+.magicParticle {
+  position: absolute;
+
+  pointer-events:
+    none;
+
+  z-index:
+    20;
+
+  animation:
+    magic 1.5s
+    ease-out
+    forwards;
+}
+
+
+/* =====================================================
    ANIMACIONES
-   ========================= */
+   ===================================================== */
 
 @keyframes pop {
 
   from {
-
     transform:
       scale(.85);
 
     opacity: 0;
-
   }
 
   to {
-
     transform:
       scale(1);
 
     opacity: 1;
-
   }
-
 }
-
 
 @keyframes kittyDance {
 
   0% {
-
     transform:
       rotate(-3deg)
       translateY(0);
-
   }
 
   50% {
-
     transform:
       rotate(3deg)
       translateY(-7px);
-
   }
 
   100% {
-
     transform:
       rotate(-3deg)
       translateY(0);
-
   }
-
 }
 
-
-@keyframes float {
+@keyframes sparkleFloat {
 
   0%,100% {
-
     transform:
-      translateY(0);
-
+      translateY(0)
+      scale(1);
+    opacity:
+      .5;
   }
 
   50% {
-
     transform:
-      translateY(-8px);
-
+      translateY(-15px)
+      scale(1.3);
+    opacity:
+      1;
   }
-
 }
 
+@keyframes heartFloat {
+
+  0%,100% {
+    transform:
+      translateY(0);
+    opacity:
+      .5;
+  }
+
+  50% {
+    transform:
+      translateY(-20px);
+    opacity:
+      1;
+  }
+}
 
 @keyframes flowerFloat {
 
   0%,100% {
-
     transform:
       translateY(0);
-
   }
 
   50% {
-
     transform:
       translateY(-8px);
-
   }
-
 }
-
 
 @keyframes bloom {
 
   0% {
-
     transform:
+      translate(-50%, -50%)
       scale(.8);
-
   }
 
-  60% {
-
+  50% {
     transform:
+      translate(-50%, -50%)
       scale(1.2);
-
   }
 
   100% {
-
     transform:
+      translate(-50%, -50%)
       scale(1);
-
   }
-
 }
 
+@keyframes magic {
+
+  0% {
+    transform:
+      translate(0,0)
+      scale(1);
+
+    opacity:
+      1;
+  }
+
+  100% {
+    transform:
+      translate(
+        var(--x),
+        var(--y)
+      )
+      scale(0);
+
+    opacity:
+      0;
+  }
+}
+
+
+/* =====================================================
+   MÓVIL
+   ===================================================== */
 
 @media(max-width:500px) {
 
   .finalMessage {
 
-    top: 58%;
+    max-height:
+      60vh;
 
-    max-height: 45vh;
+    overflow-y:
+      auto;
 
-    overflow-y: auto;
-
+    padding:
+      22px;
   }
 
 }
@@ -1192,12 +1237,13 @@ body {
 <div class="scene">
 
 
-<!-- =========================
+<!-- =================================================
      PANTALLA PRINCIPAL
-     ========================= -->
+     ================================================= -->
 
-<div class="main"
-     id="mainScreen">
+<div
+  class="main"
+  id="mainScreen">
 
 
   <div class="title">
@@ -1226,10 +1272,9 @@ body {
 </div>
 
 
-
-<!-- =========================
+<!-- =================================================
      PRIMER POPUP
-     ========================= -->
+     ================================================= -->
 
 <div
   class="overlay"
@@ -1291,10 +1336,9 @@ body {
 </div>
 
 
-
-<!-- =========================
+<!-- =================================================
      SEGUNDO POPUP
-     ========================= -->
+     ================================================= -->
 
 <div
   class="overlay"
@@ -1331,13 +1375,11 @@ body {
         <div class="kitty">
 
 
-          <div
-            class="ear leftEar">
+          <div class="ear leftEar">
           </div>
 
 
-          <div
-            class="ear rightEar">
+          <div class="ear rightEar">
           </div>
 
 
@@ -1431,10 +1473,9 @@ body {
 </div>
 
 
-
-<!-- =========================
+<!-- =================================================
      JARDÍN
-     ========================= -->
+     ================================================= -->
 
 <div
   class="garden"
@@ -1448,26 +1489,52 @@ body {
   </div>
 
 
+  <!-- ESTRELLITAS -->
+
+  <div class="sparkle s1">✦</div>
+
+  <div class="sparkle s2">✧</div>
+
+  <div class="sparkle s3">✦</div>
+
+  <div class="sparkle s4">✧</div>
+
+  <div class="sparkle s5">✦</div>
+
+
+  <!-- CORAZONES -->
+
+  <div class="floatingHeart h1">♡</div>
+
+  <div class="floatingHeart h2">♥</div>
+
+  <div class="floatingHeart h3">♡</div>
+
+  <div class="floatingHeart h4">♥</div>
+
+
+  <!-- SUELO -->
+
   <div class="grass">
   </div>
 
 
-  <!-- FLORES DECORATIVAS -->
+  <!-- FLORES -->
 
-  <div class="flower f1">
-    🌼
-  </div>
-
-  <div class="flower f2">
-    🌷
-  </div>
-
-  <div class="flower f3">
+  <div class="smallFlower sf1">
     🌸
   </div>
 
-  <div class="flower f4">
-    🌻
+  <div class="smallFlower sf2">
+    🌷
+  </div>
+
+  <div class="smallFlower sf3">
+    🌼
+  </div>
+
+  <div class="smallFlower sf4">
+    🌸
   </div>
 
 
@@ -1493,33 +1560,53 @@ body {
 
 
     <div
-      class="petal petal1">
+      class="petal left">
     </div>
 
 
     <div
-      class="petal petal2">
+      class="petal center">
     </div>
 
 
     <div
-      class="petal petal3">
+      class="petal right">
     </div>
 
 
     <div
-      class="flowerCenter">
+      class="budTop">
+    </div>
+
+
+    <div
+      class="flowerCore">
     </div>
 
 
   </div>
 
 
-  <!-- MENSAJE FINAL -->
+  <!-- CONTADOR -->
+
+  <div
+    class="counter"
+    id="counter">
+
+    ♡ encontralo... 0 / 5 ♡
+
+  </div>
+
+
+  <!-- MENSAJE -->
 
   <div
     class="finalMessage"
     id="finalMessage">
+
+    ✦ 💗 ✦
+
+    <br><br>
 
     Haber coincidido con vos en esta vida
     es lo que me hace sentir que el futuro
@@ -1539,8 +1626,12 @@ body {
     <br><br>
 
     <strong>
-      Nosotros podemos ser todo. 💗
+      Nosotros podemos ser todo.
     </strong>
+
+    <br><br>
+
+    ♡ ✦ ♡ ✦ ♡
 
   </div>
 
@@ -1551,67 +1642,62 @@ body {
 </div>
 
 
-
 <script>
 
 
-/* =========================
+/* =====================================================
    ELEMENTOS
-   ========================= */
+   ===================================================== */
 
 const overlay1 =
   document.getElementById(
     "overlay1"
   );
 
-
 const overlay2 =
   document.getElementById(
     "overlay2"
   );
-
 
 const openBtn =
   document.getElementById(
     "openBtn"
   );
 
-
 const nextBtn1 =
   document.getElementById(
     "nextBtn1"
   );
-
 
 const nextBtn2 =
   document.getElementById(
     "nextBtn2"
   );
 
-
 const closeBtn1 =
   document.getElementById(
     "closeBtn1"
   );
-
 
 const closeBtn2 =
   document.getElementById(
     "closeBtn2"
   );
 
-
 const garden =
   document.getElementById(
     "garden"
   );
-
 
 const bud =
   document.getElementById(
     "bud"
   );
 
+const counter =
+  document.getElementById(
+    "counter"
+  );
 
 const finalMessage =
   document.getElementById(
@@ -1619,217 +1705,6 @@ const finalMessage =
   );
 
 
-const mainScreen =
-  document.getElementById(
-    "mainScreen"
-  );
-
-
-/* =========================
-   POPUP 1
-   ========================= */
-
-openBtn.addEventListener(
-  "click",
-  function() {
-
-    overlay1.classList.add(
-      "show"
-    );
-
-  }
-);
-
-
-closeBtn1.addEventListener(
-  "click",
-  function() {
-
-    overlay1.classList.remove(
-      "show"
-    );
-
-  }
-);
-
-
-/* =========================
-   POPUP 2
-   ========================= */
-
-nextBtn1.addEventListener(
-  "click",
-  function() {
-
-    overlay1.classList.remove(
-      "show"
-    );
-
-    overlay2.classList.add(
-      "show"
-    );
-
-  }
-);
-
-
-closeBtn2.addEventListener(
-  "click",
-  function() {
-
-    overlay2.classList.remove(
-      "show"
-    );
-
-  }
-);
-
-
-/* =========================
-   IR AL JARDÍN
-   ========================= */
-
-nextBtn2.addEventListener(
-  "click",
-  function() {
-
-    overlay2.classList.remove(
-      "show"
-    );
-
-    garden.classList.add(
-      "show"
-    );
-
-  }
-);
-
-
-/* =========================
-   CONTADOR
-   ========================= */
-
-let toques = 0;
-
-
-/* =========================
-   POSICIONES DEL CAPULLO
-   ========================= */
-
-const posiciones = [
-
-  {
-    left: "50%",
-    top: "55%"
-  },
-
-  {
-    left: "25%",
-    top: "62%"
-  },
-
-  {
-    left: "72%",
-    top: "48%"
-  },
-
-  {
-    left: "42%",
-    top: "70%"
-  },
-
-  {
-    left: "78%",
-    top: "68%"
-  }
-
-];
-
-
-/* =========================
-   PRIMERA POSICIÓN
-   ========================= */
-
-bud.style.left =
-  posiciones[0].left;
-
-bud.style.top =
-  posiciones[0].top;
-
-
-/* =========================
-   TOCAR CAPULLO
-   ========================= */
-
-bud.addEventListener(
-  "click",
-  function() {
-
-
-    toques++;
-
-
-    /*
-
-    Si todavía no llegó a cinco,
-    movemos el capullo.
-
-    */
-
-    if (toques < 5) {
-
-
-      const nuevaPosicion =
-        posiciones[toques];
-
-
-      bud.style.left =
-        nuevaPosicion.left;
-
-
-      bud.style.top =
-        nuevaPosicion.top;
-
-
-    }
-
-
-    /*
-
-    Cuando llega a cinco,
-    abrimos la flor.
-
-    */
-
-    else {
-
-
-      bud.classList.add(
-        "open"
-      );
-
-
-      setTimeout(
-        function() {
-
-          finalMessage.classList.add(
-            "show"
-          );
-
-        },
-        900
-      );
-
-
-    }
-
-  }
-);
-
-
-</script>
-
-
-</body>
-
-</html>
+/* =====================================================
+   PRIMER POPUP
+   =============================================
