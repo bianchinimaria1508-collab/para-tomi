@@ -14,7 +14,7 @@ content="width=device-width, initial-scale=1.0">
 <style>
 
 /* =========================
-   PÁGINA GENERAL
+   GENERAL
    ========================= */
 
 * {
@@ -29,21 +29,17 @@ body {
 
   overflow: hidden;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
+  font-family:
+    "Courier New",
+    monospace;
 
   background: #f8c9dc;
-
-  font-family: "Courier New", monospace;
 
 }
 
 
 /* =========================
-   ESCENA
+   ESCENAS
    ========================= */
 
 .scene {
@@ -54,114 +50,31 @@ body {
 
   height: 100vh;
 
+}
+
+
+/* =========================
+   PANTALLA PRINCIPAL
+   ========================= */
+
+.main {
+
+  position: absolute;
+
+  inset: 0;
+
   display: flex;
+
+  flex-direction: column;
 
   align-items: center;
 
   justify-content: center;
 
-}
-
-
-/* =========================
-   DECORACIÓN
-   ========================= */
-
-.decor {
-
-  position: absolute;
-
-  user-select: none;
-
-  animation: float 4s ease-in-out infinite;
-
-}
-
-.heart {
-
-  color: #9b68c7;
-
-  font-size: 36px;
-
-  text-shadow:
-    3px 3px 0 #70458e;
-
-}
-
-.star {
-
-  color: #fff0a8;
-
-  font-size: 27px;
-
-  text-shadow:
-    3px 3px 0 #c8a84b;
-
-}
-
-
-.h1 {
-  left: 10%;
-  top: 18%;
-}
-
-.h2 {
-
-  right: 12%;
-  top: 25%;
-
-  animation-delay: 1s;
-
-}
-
-.h3 {
-
-  left: 18%;
-  bottom: 18%;
-
-  animation-delay: 1.7s;
-
-}
-
-.s1 {
-
-  right: 23%;
-  bottom: 19%;
-
-  animation-delay: .7s;
-
-}
-
-.s2 {
-
-  left: 28%;
-  top: 12%;
-
-  animation-delay: 2s;
-
-}
-
-.s3 {
-
-  right: 8%;
-  bottom: 35%;
-
-  animation-delay: 1.2s;
-
-}
-
-
-/* =========================
-   CENTRO
-   ========================= */
-
-.main {
-
   text-align: center;
 
-  z-index: 2;
-
 }
+
 
 .title {
 
@@ -178,36 +91,32 @@ body {
 }
 
 
-/* =========================
-   BOTÓN PRINCIPAL
-   ========================= */
-
 .button {
 
-  border: 4px solid #6b3d8d;
+  border:
+    4px solid #6b3d8d;
 
-  background: #9b68c7;
+  background:
+    #9b68c7;
 
   color: white;
 
-  padding: 18px 26px;
+  padding:
+    18px 26px;
 
   cursor: pointer;
 
   font:
-    bold 18px "Courier New",
+    bold 18px
+    "Courier New",
     monospace;
 
   box-shadow:
-    6px 6px 0 #6b3d8d;
+    6px 6px 0
+    #6b3d8d;
 
 }
 
-.button:hover {
-
-  background: #a976d2;
-
-}
 
 .button:active {
 
@@ -215,7 +124,8 @@ body {
     translate(5px, 5px);
 
   box-shadow:
-    1px 1px 0 #6b3d8d;
+    1px 1px 0
+    #6b3d8d;
 
 }
 
@@ -252,9 +162,10 @@ body {
 
   padding: 20px;
 
-  z-index: 10;
+  z-index: 20;
 
 }
+
 
 .overlay.show {
 
@@ -268,24 +179,22 @@ body {
   width:
     min(620px, 94vw);
 
-  background: #fff2f7;
+  background:
+    #fff2f7;
 
   border:
-    4px solid #60416f;
+    4px solid
+    #60416f;
 
   box-shadow:
     10px 10px 0
-    rgba(96, 65, 111, .55);
+    rgba(96,65,111,.55);
 
   animation:
     pop .18s steps(2);
 
 }
 
-
-/* =========================
-   BARRA SUPERIOR
-   ========================= */
 
 .bar {
 
@@ -297,12 +206,14 @@ body {
 
   padding: 8px 10px;
 
-  background: #9b68c7;
+  background:
+    #9b68c7;
 
   color: white;
 
   border-bottom:
-    4px solid #60416f;
+    4px solid
+    #60416f;
 
   font-weight: bold;
 
@@ -316,14 +227,18 @@ body {
   height: 25px;
 
   border:
-    3px solid #60416f;
+    3px solid
+    #60416f;
 
-  background: #f6c5d9;
+  background:
+    #f6c5d9;
 
-  color: #60416f;
+  color:
+    #60416f;
 
   font:
-    bold 16px "Courier New",
+    bold 16px
+    "Courier New",
     monospace;
 
   cursor: pointer;
@@ -331,16 +246,13 @@ body {
 }
 
 
-/* =========================
-   MENSAJES
-   ========================= */
-
 .content {
 
   padding:
     30px 25px 25px;
 
-  color: #5f4666;
+  color:
+    #5f4666;
 
   text-align: center;
 
@@ -380,62 +292,47 @@ body {
 
   margin-top: 24px;
 
-  color: #a06c8c;
+  color:
+    #a06c8c;
 
   font-size: 12px;
 
 }
 
 
-/* =========================
-   BOTÓN SEGUNDO MENSAJE
-   ========================= */
-
 .nextButton {
 
   margin-top: 28px;
 
-  padding: 13px 18px;
+  padding:
+    13px 18px;
 
   border:
-    3px solid #70458e;
+    3px solid
+    #70458e;
 
-  background: #f2b8d0;
+  background:
+    #f2b8d0;
 
-  color: #654270;
+  color:
+    #654270;
 
   font:
-    bold 14px "Courier New",
+    bold 14px
+    "Courier New",
     monospace;
 
   cursor: pointer;
 
   box-shadow:
-    4px 4px 0 #70458e;
-
-}
-
-
-.nextButton:hover {
-
-  background: #f7c8dc;
-
-}
-
-
-.nextButton:active {
-
-  transform:
-    translate(3px, 3px);
-
-  box-shadow:
-    1px 1px 0 #70458e;
+    4px 4px 0
+    #70458e;
 
 }
 
 
 /* =========================
-   GATITA PIXEL ART
+   GATITA
    ========================= */
 
 .kittyArea {
@@ -450,8 +347,6 @@ body {
 
   justify-content: center;
 
-  margin-bottom: 10px;
-
 }
 
 
@@ -464,12 +359,11 @@ body {
   height: 145px;
 
   animation:
-    kittyDance .8s steps(2) infinite;
+    kittyDance .8s steps(2)
+    infinite;
 
 }
 
-
-/* Cabeza */
 
 .kittyHead {
 
@@ -483,18 +377,18 @@ body {
 
   top: 22px;
 
-  background: #fffdfd;
+  background:
+    #fffdfd;
 
   border:
-    4px solid #5d4964;
+    4px solid
+    #5d4964;
 
   border-radius:
     45% 45% 42% 42%;
 
 }
 
-
-/* Orejas */
 
 .ear {
 
@@ -504,10 +398,12 @@ body {
 
   height: 35px;
 
-  background: #fffdfd;
+  background:
+    #fffdfd;
 
   border:
-    4px solid #5d4964;
+    4px solid
+    #5d4964;
 
   top: 10px;
 
@@ -534,8 +430,6 @@ body {
 }
 
 
-/* Ojos */
-
 .eye {
 
   position: absolute;
@@ -544,7 +438,8 @@ body {
 
   height: 11px;
 
-  background: #3e3045;
+  background:
+    #3e3045;
 
   top: 39px;
 
@@ -561,8 +456,6 @@ body {
 }
 
 
-/* Nariz */
-
 .nose {
 
   position: absolute;
@@ -571,7 +464,8 @@ body {
 
   height: 6px;
 
-  background: #e7a83f;
+  background:
+    #e7a83f;
 
   top: 51px;
 
@@ -579,8 +473,6 @@ body {
 
 }
 
-
-/* Bigotes */
 
 .kittyHead::before {
 
@@ -596,10 +488,12 @@ body {
 
   height: 3px;
 
-  background: #5d4964;
+  background:
+    #5d4964;
 
   box-shadow:
-    0 9px 0 #5d4964;
+    0 9px 0
+    #5d4964;
 
 }
 
@@ -618,15 +512,15 @@ body {
 
   height: 3px;
 
-  background: #5d4964;
+  background:
+    #5d4964;
 
   box-shadow:
-    0 9px 0 #5d4964;
+    0 9px 0
+    #5d4964;
 
 }
 
-
-/* Moño */
 
 .bow {
 
@@ -636,10 +530,12 @@ body {
 
   height: 23px;
 
-  background: #ed91b5;
+  background:
+    #ed91b5;
 
   border:
-    3px solid #8d4f70;
+    3px solid
+    #8d4f70;
 
   top: -10px;
 
@@ -674,10 +570,12 @@ body {
 
   height: 12px;
 
-  background: #f5b5cc;
+  background:
+    #f5b5cc;
 
   border:
-    3px solid #8d4f70;
+    3px solid
+    #8d4f70;
 
   top: -4px;
 
@@ -685,8 +583,6 @@ body {
 
 }
 
-
-/* Cuerpo */
 
 .kittyBody {
 
@@ -700,18 +596,18 @@ body {
 
   top: 98px;
 
-  background: #fffdfd;
+  background:
+    #fffdfd;
 
   border:
-    4px solid #5d4964;
+    4px solid
+    #5d4964;
 
   border-radius:
     35% 35% 25% 25%;
 
 }
 
-
-/* Patitas */
 
 .paw {
 
@@ -721,10 +617,12 @@ body {
 
   height: 17px;
 
-  background: #fffdfd;
+  background:
+    #fffdfd;
 
   border:
-    4px solid #5d4964;
+    4px solid
+    #5d4964;
 
   top: 130px;
 
@@ -751,46 +649,400 @@ body {
 }
 
 
-/* Corazones */
+/* =========================
+   JARDÍN
+   ========================= */
 
-.heartsAround {
+.garden {
+
+  position: fixed;
+
+  inset: 0;
+
+  display: none;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      #f5c9df 0%,
+      #f9d9e8 60%,
+      #b8d6a3 60%,
+      #9fc28d 100%
+    );
+
+}
+
+
+.garden.show {
+
+  display: block;
+
+}
+
+
+.gardenTitle {
 
   position: absolute;
 
-  color: #ed91b5;
+  top: 35px;
 
-  font-size: 25px;
+  width: 100%;
 
-  left: 23%;
+  text-align: center;
 
-  top: 20px;
+  color:
+    #74458f;
+
+  font-size:
+    clamp(16px,4vw,25px);
+
+  text-shadow:
+    3px 3px 0
+    #f0aeca;
+
+}
+
+
+/* Pastito */
+
+.grass {
+
+  position: absolute;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 40%;
+
+  background:
+    #9fc28d;
+
+  border-top:
+    5px solid
+    #71915e;
+
+}
+
+
+/* Flores decorativas */
+
+.flower {
+
+  position: absolute;
+
+  font-size: 35px;
 
   animation:
-    heartFloat 1s steps(2) infinite;
+    flowerFloat 3s
+    ease-in-out
+    infinite;
 
 }
 
 
-.heartTwo {
+.f1 {
+  left: 10%;
+  bottom: 20%;
+}
 
-  left: 70%;
+.f2 {
+  right: 12%;
+  bottom: 25%;
+  animation-delay: .7s;
+}
 
-  top: 45px;
+.f3 {
+  left: 25%;
+  bottom: 10%;
+  animation-delay: 1s;
+}
 
-  animation-delay:
-    .3s;
+.f4 {
+  right: 30%;
+  bottom: 15%;
+  animation-delay: 1.5s;
+}
+
+
+/* =========================
+   CAPULLO
+   ========================= */
+
+.bud {
+
+  position: absolute;
+
+  width: 70px;
+
+  height: 90px;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition:
+    left .35s ease,
+    top .35s ease;
 
 }
 
 
-.heartThree {
+/* tallo */
 
-  left: 75%;
+.stem {
 
-  top: 105px;
+  position: absolute;
 
-  animation-delay:
-    .6s;
+  width: 8px;
+
+  height: 55px;
+
+  background:
+    #648a55;
+
+  bottom: 0;
+
+  left: 31px;
+
+}
+
+
+/* hojas */
+
+.leaf {
+
+  position: absolute;
+
+  width: 28px;
+
+  height: 14px;
+
+  background:
+    #7da967;
+
+  border:
+    3px solid
+    #557746;
+
+  bottom: 18px;
+
+}
+
+
+.leafLeft {
+
+  left: 5px;
+
+  transform:
+    rotate(25deg);
+
+}
+
+
+.leafRight {
+
+  right: 5px;
+
+  transform:
+    rotate(-25deg);
+
+}
+
+
+/* pétalos cerrados */
+
+.petal {
+
+  position: absolute;
+
+  width: 28px;
+
+  height: 45px;
+
+  background:
+    #d986ad;
+
+  border:
+    4px solid
+    #8d5274;
+
+  top: 0;
+
+}
+
+
+.petal1 {
+
+  left: 10px;
+
+  transform:
+    rotate(-18deg);
+
+}
+
+
+.petal2 {
+
+  left: 21px;
+
+  z-index: 2;
+
+}
+
+
+.petal3 {
+
+  left: 32px;
+
+  transform:
+    rotate(18deg);
+
+}
+
+
+/* =========================
+   FLOR ABIERTA
+   ========================= */
+
+.bud.open {
+
+  animation:
+    bloom .8s
+    ease forwards;
+
+}
+
+
+.bud.open .petal {
+
+  background:
+    #f2a9c7;
+
+}
+
+
+.bud.open .petal1 {
+
+  transform:
+    rotate(-45deg)
+    translate(-10px,-5px);
+
+}
+
+
+.bud.open .petal2 {
+
+  transform:
+    translateY(-15px)
+    scale(1.15);
+
+}
+
+
+.bud.open .petal3 {
+
+  transform:
+    rotate(45deg)
+    translate(10px,-5px);
+
+}
+
+
+.flowerCenter {
+
+  position: absolute;
+
+  width: 18px;
+
+  height: 18px;
+
+  border-radius: 50%;
+
+  background:
+    #ffd77d;
+
+  border:
+    3px solid
+    #aa7b35;
+
+  top: 18px;
+
+  left: 26px;
+
+  display: none;
+
+  z-index: 4;
+
+}
+
+
+.bud.open .flowerCenter {
+
+  display: block;
+
+}
+
+
+/* =========================
+   MENSAJE FINAL
+   ========================= */
+
+.finalMessage {
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 55%;
+
+  transform:
+    translate(-50%,-50%);
+
+  width:
+    min(650px,88vw);
+
+  padding:
+    25px;
+
+  background:
+    rgba(255,242,247,.95);
+
+  border:
+    4px solid
+    #8d5274;
+
+  box-shadow:
+    8px 8px 0
+    rgba(96,65,111,.4);
+
+  color:
+    #60416f;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  line-height: 1.6;
+
+  font-size:
+    clamp(14px,3vw,19px);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity .8s
+    ease;
+
+}
+
+
+.finalMessage.show {
+
+  opacity: 1;
 
 }
 
@@ -798,25 +1050,6 @@ body {
 /* =========================
    ANIMACIONES
    ========================= */
-
-@keyframes float {
-
-  0%, 100% {
-
-    transform:
-      translateY(0);
-
-  }
-
-  50% {
-
-    transform:
-      translateY(-9px);
-
-  }
-
-}
-
 
 @keyframes pop {
 
@@ -846,33 +1079,33 @@ body {
   0% {
 
     transform:
-      translateY(0)
-      rotate(-3deg);
+      rotate(-3deg)
+      translateY(0);
 
   }
 
   50% {
 
     transform:
-      translateY(-7px)
-      rotate(3deg);
+      rotate(3deg)
+      translateY(-7px);
 
   }
 
   100% {
 
     transform:
-      translateY(0)
-      rotate(-3deg);
+      rotate(-3deg)
+      translateY(0);
 
   }
 
 }
 
 
-@keyframes heartFloat {
+@keyframes float {
 
-  0%, 100% {
+  0%,100% {
 
     transform:
       translateY(0);
@@ -889,29 +1122,60 @@ body {
 }
 
 
-/* =========================
-   CELULAR
-   ========================= */
+@keyframes flowerFloat {
 
-@media (max-width: 500px) {
+  0%,100% {
 
-  .secondPopup {
+    transform:
+      translateY(0);
 
-    max-height: 90vh;
+  }
+
+  50% {
+
+    transform:
+      translateY(-8px);
+
+  }
+
+}
+
+
+@keyframes bloom {
+
+  0% {
+
+    transform:
+      scale(.8);
+
+  }
+
+  60% {
+
+    transform:
+      scale(1.2);
+
+  }
+
+  100% {
+
+    transform:
+      scale(1);
+
+  }
+
+}
+
+
+@media(max-width:500px) {
+
+  .finalMessage {
+
+    top: 58%;
+
+    max-height: 45vh;
 
     overflow-y: auto;
-
-  }
-
-  .kittyArea {
-
-    height: 150px;
-
-  }
-
-  .message {
-
-    line-height: 1.45;
 
   }
 
@@ -928,283 +1192,360 @@ body {
 <div class="scene">
 
 
-  <!-- DECORACIONES -->
+<!-- =========================
+     PANTALLA PRINCIPAL
+     ========================= -->
 
-  <div class="decor heart h1">♥</div>
-
-  <div class="decor heart h2">♥</div>
-
-  <div class="decor heart h3">♥</div>
-
-  <div class="decor star s1">★</div>
-
-  <div class="decor star s2">★</div>
-
-  <div class="decor star s3">★</div>
+<div class="main"
+     id="mainScreen">
 
 
-  <!-- PANTALLA PRINCIPAL -->
+  <div class="title">
 
-  <main class="main">
+    ✦ tengo algo para vos ✦
 
-    <div class="title">
+  </div>
 
-      ✦ tengo algo para vos ✦
+
+  <button
+    class="button"
+    id="openBtn">
+
+    ¡Tocame, Tomi!
+
+  </button>
+
+
+  <div class="hint">
+
+    ♡ hay una sorpresita escondida acá ♡
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =========================
+     PRIMER POPUP
+     ========================= -->
+
+<div
+  class="overlay"
+  id="overlay1">
+
+
+  <div class="popup">
+
+
+    <div class="bar">
+
+      <span>
+        💜 mensaje.exe
+      </span>
+
+
+      <button
+        class="close"
+        id="closeBtn1">
+
+        ×
+
+      </button>
 
     </div>
 
 
-    <button
-      class="button"
-      id="openBtn">
-
-      ¡Tocame, Tomi!
-
-    </button>
+    <div class="content">
 
 
-    <div class="hint">
-
-      ♡ hay una sorpresita escondida acá ♡
-
-    </div>
-
-  </main>
+      <div class="tiny-heart">
+        💜
+      </div>
 
 
+      <div class="message">
 
-  <!-- =========================
-       PRIMER POPUP
-       ========================= -->
-
-  <div
-    class="overlay"
-    id="overlay1">
-
-
-    <div class="popup">
-
-
-      <div class="bar">
-
-        <span>
-          💜 mensaje.exe
-        </span>
-
-
-        <button
-          class="close"
-          id="closeBtn1">
-
-          ×
-
-        </button>
+        Aprendí a programar una página web
+        solo para decirte que sos el amor
+        de mi vida y que nunca voy a dejar
+        de amarte.
 
       </div>
 
 
-      <div class="content">
+      <button
+        class="nextButton"
+        id="nextBtn1">
 
+        ♡ Hay algo más... ♡
 
-        <div class="tiny-heart">
+      </button>
 
-          💜
-
-        </div>
-
-
-        <div class="message">
-
-          Aprendí a programar una página web
-          solo para decirte que sos el amor
-          de mi vida y que nunca voy a dejar
-          de amarte.
-
-        </div>
-
-
-        <button
-          class="nextButton"
-          id="nextBtn">
-
-          ♡ Hay algo más... ♡
-
-        </button>
-
-
-      </div>
 
     </div>
 
   </div>
 
+</div>
 
 
-  <!-- =========================
-       SEGUNDO POPUP
-       ========================= -->
 
-  <div
-    class="overlay"
-    id="overlay2">
+<!-- =========================
+     SEGUNDO POPUP
+     ========================= -->
 
-
-    <div class="popup secondPopup">
+<div
+  class="overlay"
+  id="overlay2">
 
 
-      <div class="bar">
-
-        <span>
-          💗 para vos.exe
-        </span>
+  <div class="popup">
 
 
-        <button
-          class="close"
-          id="closeBtn2">
+    <div class="bar">
 
-          ×
-
-        </button>
-
-      </div>
+      <span>
+        💗 para vos.exe
+      </span>
 
 
-      <div class="content">
+      <button
+        class="close"
+        id="closeBtn2">
+
+        ×
+
+      </button>
+
+    </div>
 
 
-        <!-- GATITA -->
-
-        <div class="kittyArea">
+    <div class="content">
 
 
-          <div class="heartsAround">
-            ♥
+      <div class="kittyArea">
+
+
+        <div class="kitty">
+
+
+          <div
+            class="ear leftEar">
           </div>
 
 
           <div
-            class="heartsAround heartTwo">
+            class="ear rightEar">
+          </div>
 
-            ♥
+
+          <div class="kittyHead">
+
+
+            <div
+              class="eye leftEye">
+            </div>
+
+
+            <div
+              class="eye rightEye">
+            </div>
+
+
+            <div class="nose">
+            </div>
+
+
+            <div
+              class="bow leftBow">
+            </div>
+
+
+            <div
+              class="bow rightBow">
+            </div>
+
+
+            <div
+              class="bowCenter">
+            </div>
+
+
+          </div>
+
+
+          <div class="kittyBody">
           </div>
 
 
           <div
-            class="heartsAround heartThree">
-
-            ♥
+            class="paw leftPaw">
           </div>
 
 
-          <div class="kitty">
-
-
-            <div
-              class="ear leftEar">
-            </div>
-
-
-            <div
-              class="ear rightEar">
-            </div>
-
-
-            <div class="kittyHead">
-
-
-              <div
-                class="eye leftEye">
-              </div>
-
-
-              <div
-                class="eye rightEye">
-              </div>
-
-
-              <div class="nose">
-              </div>
-
-
-              <div
-                class="bow leftBow">
-              </div>
-
-
-              <div
-                class="bow rightBow">
-              </div>
-
-
-              <div
-                class="bowCenter">
-              </div>
-
-
-            </div>
-
-
-            <div class="kittyBody">
-            </div>
-
-
-            <div
-              class="paw leftPaw">
-            </div>
-
-
-            <div
-              class="paw rightPaw">
-            </div>
-
-
+          <div
+            class="paw rightPaw">
           </div>
 
-        </div>
-
-
-
-        <!-- SEGUNDO MENSAJE -->
-
-        <div
-          class="message secondMessage">
-
-
-          Quiero que sepas que estoy muy orgullosa
-          de vos y que sé que van a venir muchas
-          cosas buenas.
-
-
-          <br><br>
-
-
-          Sos un hombre precioso en todos los sentidos,
-          y agradezco ser la mujer que te va a
-          acompañar para siempre.
-
-
-          <br><br>
-
-
-          No puedo pedir nada mejor en esta vida. 💗
-
 
         </div>
-
-
-        <div class="footer">
-
-          ♡ siempre con vos ♡
-
-        </div>
-
 
       </div>
+
+
+      <div
+        class="message secondMessage">
+
+        Quiero que sepas que estoy muy orgullosa
+        de vos y que sé que van a venir muchas
+        cosas buenas.
+
+        <br><br>
+
+        Sos un hombre precioso en todos los sentidos,
+        y agradezco ser la mujer que te va a
+        acompañar para siempre.
+
+        <br><br>
+
+        No puedo pedir nada mejor en esta vida. 💗
+
+      </div>
+
+
+      <button
+        class="nextButton"
+        id="nextBtn2">
+
+        ♡ Quiero seguir... ♡
+
+      </button>
+
 
     </div>
 
   </div>
+
+</div>
+
+
+
+<!-- =========================
+     JARDÍN
+     ========================= -->
+
+<div
+  class="garden"
+  id="garden">
+
+
+  <div class="gardenTitle">
+
+    ✦ hay algo más que quiero decirte ✦
+
+  </div>
+
+
+  <div class="grass">
+  </div>
+
+
+  <!-- FLORES DECORATIVAS -->
+
+  <div class="flower f1">
+    🌼
+  </div>
+
+  <div class="flower f2">
+    🌷
+  </div>
+
+  <div class="flower f3">
+    🌸
+  </div>
+
+  <div class="flower f4">
+    🌻
+  </div>
+
+
+  <!-- CAPULLO -->
+
+  <div
+    class="bud"
+    id="bud">
+
+
+    <div class="stem">
+    </div>
+
+
+    <div
+      class="leaf leafLeft">
+    </div>
+
+
+    <div
+      class="leaf leafRight">
+    </div>
+
+
+    <div
+      class="petal petal1">
+    </div>
+
+
+    <div
+      class="petal petal2">
+    </div>
+
+
+    <div
+      class="petal petal3">
+    </div>
+
+
+    <div
+      class="flowerCenter">
+    </div>
+
+
+  </div>
+
+
+  <!-- MENSAJE FINAL -->
+
+  <div
+    class="finalMessage"
+    id="finalMessage">
+
+    Haber coincidido con vos en esta vida
+    es lo que me hace sentir que el futuro
+    va a ser muy bonito juntos.
+
+    <br><br>
+
+    Nunca me imaginé con nadie,
+    pero vos viniste a romper eso.
+
+    <br><br>
+
+    Y te elijo, te elijo cada día,
+    cada hora, cada minuto,
+    cada segundo.
+
+    <br><br>
+
+    <strong>
+      Nosotros podemos ser todo. 💗
+    </strong>
+
+  </div>
+
+
+</div>
 
 
 </div>
@@ -1217,7 +1558,6 @@ body {
 /* =========================
    ELEMENTOS
    ========================= */
-
 
 const overlay1 =
   document.getElementById(
@@ -1237,6 +1577,18 @@ const openBtn =
   );
 
 
+const nextBtn1 =
+  document.getElementById(
+    "nextBtn1"
+  );
+
+
+const nextBtn2 =
+  document.getElementById(
+    "nextBtn2"
+  );
+
+
 const closeBtn1 =
   document.getElementById(
     "closeBtn1"
@@ -1249,17 +1601,33 @@ const closeBtn2 =
   );
 
 
-const nextBtn =
+const garden =
   document.getElementById(
-    "nextBtn"
+    "garden"
   );
 
 
+const bud =
+  document.getElementById(
+    "bud"
+  );
+
+
+const finalMessage =
+  document.getElementById(
+    "finalMessage"
+  );
+
+
+const mainScreen =
+  document.getElementById(
+    "mainScreen"
+  );
+
 
 /* =========================
-   ABRIR PRIMER POPUP
+   POPUP 1
    ========================= */
-
 
 openBtn.addEventListener(
   "click",
@@ -1271,12 +1639,6 @@ openBtn.addEventListener(
 
   }
 );
-
-
-
-/* =========================
-   CERRAR PRIMER POPUP
-   ========================= */
 
 
 closeBtn1.addEventListener(
@@ -1291,13 +1653,11 @@ closeBtn1.addEventListener(
 );
 
 
-
 /* =========================
-   IR AL SEGUNDO MENSAJE
+   POPUP 2
    ========================= */
 
-
-nextBtn.addEventListener(
+nextBtn1.addEventListener(
   "click",
   function() {
 
@@ -1313,12 +1673,6 @@ nextBtn.addEventListener(
 );
 
 
-
-/* =========================
-   CERRAR SEGUNDO POPUP
-   ========================= */
-
-
 closeBtn2.addEventListener(
   "click",
   function() {
@@ -1331,41 +1685,141 @@ closeBtn2.addEventListener(
 );
 
 
-
 /* =========================
-   CERRAR TOCANDO AFUERA
+   IR AL JARDÍN
    ========================= */
 
-
-overlay1.addEventListener(
+nextBtn2.addEventListener(
   "click",
-  function(event) {
+  function() {
 
-    if (
-      event.target === overlay1
-    ) {
+    overlay2.classList.remove(
+      "show"
+    );
 
-      overlay1.classList.remove(
-        "show"
-      );
-
-    }
+    garden.classList.add(
+      "show"
+    );
 
   }
 );
 
 
-overlay2.addEventListener(
+/* =========================
+   CONTADOR
+   ========================= */
+
+let toques = 0;
+
+
+/* =========================
+   POSICIONES DEL CAPULLO
+   ========================= */
+
+const posiciones = [
+
+  {
+    left: "50%",
+    top: "55%"
+  },
+
+  {
+    left: "25%",
+    top: "62%"
+  },
+
+  {
+    left: "72%",
+    top: "48%"
+  },
+
+  {
+    left: "42%",
+    top: "70%"
+  },
+
+  {
+    left: "78%",
+    top: "68%"
+  }
+
+];
+
+
+/* =========================
+   PRIMERA POSICIÓN
+   ========================= */
+
+bud.style.left =
+  posiciones[0].left;
+
+bud.style.top =
+  posiciones[0].top;
+
+
+/* =========================
+   TOCAR CAPULLO
+   ========================= */
+
+bud.addEventListener(
   "click",
-  function(event) {
+  function() {
 
-    if (
-      event.target === overlay2
-    ) {
 
-      overlay2.classList.remove(
-        "show"
+    toques++;
+
+
+    /*
+
+    Si todavía no llegó a cinco,
+    movemos el capullo.
+
+    */
+
+    if (toques < 5) {
+
+
+      const nuevaPosicion =
+        posiciones[toques];
+
+
+      bud.style.left =
+        nuevaPosicion.left;
+
+
+      bud.style.top =
+        nuevaPosicion.top;
+
+
+    }
+
+
+    /*
+
+    Cuando llega a cinco,
+    abrimos la flor.
+
+    */
+
+    else {
+
+
+      bud.classList.add(
+        "open"
       );
+
+
+      setTimeout(
+        function() {
+
+          finalMessage.classList.add(
+            "show"
+          );
+
+        },
+        900
+      );
+
 
     }
 
