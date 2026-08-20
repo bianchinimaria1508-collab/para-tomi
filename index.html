@@ -1,28 +1,16 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Tomi 💜</title>
 
-
 <style>
-
-/* =====================================
-   CONFIGURACIÓN GENERAL
-===================================== */
-
 * {
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     margin: 0;
     width: 100%;
     height: 100%;
@@ -33,742 +21,415 @@ body {
     font-family: "Courier New", monospace;
 }
 
-
-/* =====================================
+/* =========================
    PANTALLA PRINCIPAL
-===================================== */
+========================= */
 
-.main {
+#inicio {
     position: fixed;
-
     inset: 0;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
 
     background:
-        radial-gradient(
-            circle,
-            #fbddea 0%,
-            #f7c9dd 55%,
-            #f2bad3 100%
-        );
-
-    overflow: hidden;
+        radial-gradient(circle at center,
+        #fde4ef 0%,
+        #f8ccdf 55%,
+        #f2bad3 100%);
 }
 
+/* Corazones y estrellas */
 
-/* =====================================
-   CORAZONES Y ESTRELLAS
-===================================== */
-
-.mainDecoration {
-
-    position: fixed !important;
-
-    z-index: 9999 !important;
-
+.decoracion {
+    position: absolute;
     pointer-events: none;
-
-    display: block !important;
-
-    animation:
-        floatDecoration
-        3s
-        ease-in-out
-        infinite;
+    z-index: 2;
+    animation: flotar 3s ease-in-out infinite;
 }
 
-
-.heart1 {
-    left: 13%;
-    top: 28%;
-
-    color: #e88eb5;
-
-    font-size: 34px;
+.corazon1 {
+    left: 12%;
+    top: 25%;
+    font-size: 35px;
+    color: #df83ad;
 }
 
-
-.heart2 {
+.corazon2 {
     right: 13%;
-    top: 32%;
-
-    color: #d889b5;
-
-    font-size: 30px;
-
+    top: 30%;
+    font-size: 31px;
+    color: #d783ae;
     animation-delay: .8s;
 }
 
-
-.heart3 {
+.corazon3 {
     left: 20%;
     bottom: 22%;
-
-    color: #ed9fc0;
-
-    font-size: 25px;
-
+    font-size: 27px;
+    color: #ed9cbd;
     animation-delay: 1.5s;
 }
 
-
-.heart4 {
-    right: 20%;
+.corazon4 {
+    right: 19%;
     bottom: 25%;
-
-    color: #d889b5;
-
     font-size: 34px;
-
+    color: #d783ae;
     animation-delay: 2s;
 }
 
+.estrella1 {
+    left: 25%;
+    top: 18%;
+    font-size: 28px;
+    color: white;
+}
 
-.star1 {
-    left: 26%;
+.estrella2 {
+    right: 24%;
     top: 19%;
-
+    font-size: 31px;
     color: white;
-
-    font-size: 27px;
-
-    animation-delay: .4s;
+    animation-delay: .7s;
 }
 
-
-.star2 {
-    right: 25%;
-    top: 20%;
-
-    color: white;
-
-    font-size: 30px;
-
-    animation-delay: 1.1s;
-}
-
-
-.star3 {
+.estrella3 {
     left: 12%;
     bottom: 34%;
-
-    color: #fff8fc;
-
-    font-size: 21px;
-
-    animation-delay: 1.7s;
+    font-size: 22px;
+    color: white;
+    animation-delay: 1.4s;
 }
 
-
-.star4 {
+.estrella4 {
     right: 12%;
     bottom: 32%;
-
-    color: #fff8fc;
-
-    font-size: 24px;
-
-    animation-delay: 2.3s;
+    font-size: 25px;
+    color: white;
+    animation-delay: 2s;
 }
 
-
-@keyframes floatDecoration {
-
-    0%,
-    100% {
-        transform:
-            translateY(0)
-            rotate(0deg)
-            scale(1);
-
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
         opacity: .65;
     }
 
     50% {
-        transform:
-            translateY(-14px)
-            rotate(8deg)
-            scale(1.2);
-
+        transform: translateY(-13px) rotate(8deg);
         opacity: 1;
     }
 }
 
+/* Título */
 
-/* =====================================
-   TÍTULO
-===================================== */
-
-.title {
-
+.titulo {
     position: relative;
-
-    z-index: 10;
+    z-index: 5;
 
     margin-bottom: 28px;
 
     color: #74458f;
 
-    font-size:
-        clamp(18px, 4vw, 28px);
+    font-size: clamp(18px, 4vw, 28px);
 
-    text-shadow:
-        3px 3px 0 #efaccb;
+    text-shadow: 3px 3px 0 #efaccb;
 }
 
+/* Botón */
 
-/* =====================================
-   BOTÓN PRINCIPAL
-===================================== */
-
-.button {
-
+#botonTomi {
     position: relative;
+    z-index: 5;
 
-    z-index: 10;
+    padding: 18px 26px;
 
-    padding:
-        18px 26px;
+    border: 4px solid #60387e;
 
-    border:
-        4px solid #6b3d8d;
-
-    background:
-        #9b68c7;
+    background: #9b68c7;
 
     color: white;
 
     cursor: pointer;
 
-    font:
-        bold 18px
-        "Courier New",
-        monospace;
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    font-weight: bold;
 
-    box-shadow:
-        6px 6px 0 #6b3d8d;
+    box-shadow: 6px 6px 0 #60387e;
 }
 
-
-.button:active {
-
-    transform:
-        translate(5px, 5px);
-
-    box-shadow:
-        1px 1px 0 #6b3d8d;
+#botonTomi:active {
+    transform: translate(5px, 5px);
+    box-shadow: 1px 1px 0 #60387e;
 }
 
-
-.hint {
-
+.subtitulo {
     position: relative;
+    z-index: 5;
 
-    z-index: 10;
-
-    margin-top: 24px;
+    margin-top: 25px;
 
     color: #8d5b78;
 
     font-size: 13px;
 }
 
-
-/* =====================================
+/* =========================
    POPUPS
-===================================== */
+========================= */
 
-.overlay {
-
+.popupFondo {
     position: fixed;
-
     inset: 0;
 
     display: none;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 20px;
 
-    background:
-        rgba(101, 62, 91, .30);
+    background: rgba(90, 50, 80, .35);
 
-    z-index: 10000;
+    z-index: 100;
 }
 
-
-.overlay.show {
-
+.popupFondo.visible {
     display: flex;
 }
-
 
 .popup {
+    width: min(620px, 94vw);
 
-    width:
-        min(620px, 94vw);
+    background: #fff3f8;
 
-    background:
-        #fff2f7;
+    border: 4px solid #60416f;
 
-    border:
-        4px solid #60416f;
+    box-shadow: 10px 10px 0 rgba(96,65,111,.45);
 
-    box-shadow:
-        10px 10px 0
-        rgba(96,65,111,.55);
-
-    animation:
-        popupAppear
-        .2s
-        steps(2);
+    animation: aparecer .25s ease;
 }
 
+@keyframes aparecer {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
 
-.bar {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
+.barra {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
-    padding:
-        8px 10px;
+    padding: 8px 10px;
 
-    background:
-        #9b68c7;
+    background: #9b68c7;
 
     color: white;
 
-    border-bottom:
-        4px solid #60416f;
+    border-bottom: 4px solid #60416f;
 
     font-weight: bold;
 }
 
+.cerrar {
+    width: 28px;
+    height: 26px;
 
-.close {
+    border: 3px solid #60416f;
 
-    width: 27px;
+    background: #f6c5d9;
 
-    height: 25px;
+    color: #60416f;
 
-    border:
-        3px solid #60416f;
-
-    background:
-        #f6c5d9;
-
-    color:
-        #60416f;
-
-    font:
-        bold 16px
-        "Courier New",
-        monospace;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 17px;
 
     cursor: pointer;
 }
 
-
-.content {
-
-    padding:
-        28px 24px 25px;
-
-    color:
-        #5f4666;
+.contenido {
+    padding: 28px 24px;
 
     text-align: center;
+
+    color: #60466b;
 }
 
-
-.tiny-heart {
-
+.corazonGrande {
+    font-size: 45px;
     margin-bottom: 15px;
-
-    font-size: 42px;
 }
 
-
-.message {
-
-    font-size:
-        clamp(16px, 3.5vw, 22px);
-
+.mensaje {
+    font-size: clamp(16px, 3.5vw, 21px);
     line-height: 1.6;
-
     font-weight: bold;
 }
 
-
-.secondMessage {
-
-    font-size:
-        clamp(14px, 3vw, 18px);
-}
-
-
-.nextButton {
-
+.botonSiguiente {
     margin-top: 28px;
 
-    padding:
-        13px 18px;
+    padding: 13px 18px;
 
-    border:
-        3px solid #70458e;
+    border: 3px solid #70458e;
 
-    background:
-        #f2b8d0;
+    background: #f2b8d0;
 
-    color:
-        #654270;
+    color: #654270;
 
-    font:
-        bold 14px
-        "Courier New",
-        monospace;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
 
     cursor: pointer;
 
-    box-shadow:
-        4px 4px 0 #70458e;
+    box-shadow: 4px 4px 0 #70458e;
 }
 
-
-/* =====================================
+/* =========================
    HELLO KITTY
-===================================== */
-
-.kittyArea {
-
-    height: 165px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
+========================= */
 
 .kitty {
-
     position: relative;
 
     width: 120px;
-
     height: 145px;
 
-    animation:
-        kittyDance
-        .8s
-        steps(2)
-        infinite;
+    margin: 0 auto 20px;
+
+    animation: bailar .8s steps(2) infinite;
 }
 
-
-.kittyHead {
-
-    position: absolute;
-
-    width: 100px;
-
-    height: 82px;
-
-    left: 10px;
-
-    top: 22px;
-
-    background: #fffdfd;
-
-    border:
-        4px solid #5d4964;
-
-    border-radius:
-        45% 45% 42% 42%;
-}
-
-
-.ear {
-
-    position: absolute;
-
-    width: 35px;
-
-    height: 35px;
-
-    top: 10px;
-
-    background: #fffdfd;
-
-    border:
-        4px solid #5d4964;
-}
-
-
-.leftEar {
-
-    left: 17px;
-
-    transform:
-        rotate(-30deg);
-}
-
-
-.rightEar {
-
-    right: 17px;
-
-    transform:
-        rotate(30deg);
-}
-
-
-.eye {
-
-    position: absolute;
-
-    width: 7px;
-
-    height: 11px;
-
-    top: 39px;
-
-    background:
-        #3e3045;
-}
-
-
-.leftEye {
-    left: 27px;
-}
-
-
-.rightEye {
-    right: 27px;
-}
-
-
-.nose {
-
-    position: absolute;
-
-    width: 8px;
-
-    height: 6px;
-
-    left: 42px;
-
-    top: 51px;
-
-    background:
-        #e7a83f;
-}
-
-
-.kittyHead::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: -15px;
-
-    top: 48px;
-
-    width: 20px;
-
-    height: 3px;
-
-    background:
-        #5d4964;
-
-    box-shadow:
-        0 9px 0 #5d4964;
-}
-
-
-.kittyHead::after {
-
-    content: "";
-
-    position: absolute;
-
-    right: -15px;
-
-    top: 48px;
-
-    width: 20px;
-
-    height: 3px;
-
-    background:
-        #5d4964;
-
-    box-shadow:
-        0 9px 0 #5d4964;
-}
-
-
-.bow {
-
-    position: absolute;
-
-    width: 25px;
-
-    height: 23px;
-
-    top: -10px;
-
-    background:
-        #ed91b5;
-
-    border:
-        3px solid #8d4f70;
-}
-
-
-.leftBow {
-
-    right: -18px;
-
-    transform:
-        rotate(-15deg);
-}
-
-
-.rightBow {
-
-    right: -35px;
-
-    transform:
-        rotate(15deg);
-}
-
-
-.bowCenter {
-
-    position: absolute;
-
-    width: 12px;
-
-    height: 12px;
-
-    right: -27px;
-
-    top: -4px;
-
-    background:
-        #f5b5cc;
-
-    border:
-        3px solid #8d4f70;
-}
-
-
-.kittyBody {
-
-    position: absolute;
-
-    width: 58px;
-
-    height: 55px;
-
-    left: 31px;
-
-    top: 98px;
-
-    background:
-        #fffdfd;
-
-    border:
-        4px solid #5d4964;
-
-    border-radius:
-        35% 35% 25% 25%;
-}
-
-
-.paw {
-
-    position: absolute;
-
-    width: 25px;
-
-    height: 17px;
-
-    top: 130px;
-
-    background:
-        #fffdfd;
-
-    border:
-        4px solid #5d4964;
-}
-
-
-.leftPaw {
-
-    left: 21px;
-
-    transform:
-        rotate(20deg);
-}
-
-
-.rightPaw {
-
-    right: 21px;
-
-    transform:
-        rotate(-20deg);
-}
-
-
-@keyframes kittyDance {
-
-    0% {
-        transform:
-            rotate(-3deg)
-            translateY(0);
+@keyframes bailar {
+    0%, 100% {
+        transform: rotate(-3deg) translateY(0);
     }
 
     50% {
-        transform:
-            rotate(3deg)
-            translateY(-7px);
-    }
-
-    100% {
-        transform:
-            rotate(-3deg)
-            translateY(0);
+        transform: rotate(3deg) translateY(-7px);
     }
 }
 
+.cabeza {
+    position: absolute;
 
-/* =====================================
+    left: 10px;
+    top: 25px;
+
+    width: 100px;
+    height: 80px;
+
+    background: white;
+
+    border: 4px solid #5d4964;
+
+    border-radius: 45%;
+}
+
+.ojo {
+    position: absolute;
+
+    top: 40px;
+
+    width: 7px;
+    height: 11px;
+
+    background: #3e3045;
+}
+
+.ojoIzq {
+    left: 27px;
+}
+
+.ojoDer {
+    right: 27px;
+}
+
+.nariz {
+    position: absolute;
+
+    left: 43px;
+    top: 52px;
+
+    width: 9px;
+    height: 7px;
+
+    background: #e7a83f;
+}
+
+.oreja {
+    position: absolute;
+
+    top: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    background: white;
+
+    border: 4px solid #5d4964;
+}
+
+.orejaIzq {
+    left: 15px;
+    transform: rotate(-30deg);
+}
+
+.orejaDer {
+    right: 15px;
+    transform: rotate(30deg);
+}
+
+.moño {
+    position: absolute;
+
+    right: -28px;
+    top: 4px;
+
+    width: 28px;
+    height: 25px;
+
+    background: #ed91b5;
+
+    border: 3px solid #8d4f70;
+
+    transform: rotate(10deg);
+}
+
+.cuerpo {
+    position: absolute;
+
+    left: 31px;
+    top: 99px;
+
+    width: 58px;
+    height: 48px;
+
+    background: white;
+
+    border: 4px solid #5d4964;
+
+    border-radius: 35%;
+}
+
+/* =========================
    JARDÍN
-===================================== */
+========================= */
 
-.garden {
-
+#jardin {
     position: fixed;
-
     inset: 0;
 
     display: none;
@@ -777,408 +438,299 @@ body {
 
     background:
         linear-gradient(
-            #f7cfe2 0%,
-            #f9dbe9 54%,
-            #c6dda8 54%,
-            #a9cc91 100%
+            #f8d4e5 0%,
+            #f9dfeb 54%,
+            #bfd79e 54%,
+            #a6c88e 100%
         );
 }
 
-
-.garden.show {
-
+#jardin.visible {
     display: block;
 }
 
-
-.gardenTitle {
-
+.tituloJardin {
     position: absolute;
 
-    top: 30px;
+    top: 28px;
 
     width: 100%;
 
     text-align: center;
 
-    color:
-        #74458f;
+    color: #74458f;
 
-    font-size:
-        clamp(16px, 4vw, 25px);
+    font-size: clamp(16px, 4vw, 25px);
 
-    text-shadow:
-        3px 3px 0 #f0aeca;
+    text-shadow: 3px 3px 0 #efb0cb;
 
-    z-index: 5;
+    z-index: 10;
 }
 
-
-/* =====================================
-   ESTRELLAS DEL JARDÍN
-===================================== */
-
-.sparkle {
-
+.brillito {
     position: absolute;
 
-    color:
-        #fff8fc;
+    color: white;
 
     pointer-events: none;
 
-    animation:
-        gardenFloat
-        3s
-        ease-in-out
-        infinite;
+    animation: brillar 2.5s ease-in-out infinite;
 }
 
-
-.s1 {
-    left: 10%;
-    top: 20%;
-    font-size: 18px;
-}
-
-
-.s2 {
-    left: 25%;
-    top: 35%;
-    font-size: 15px;
-    animation-delay: .7s;
-}
-
-
-.s3 {
-    right: 18%;
+.b1 {
+    left: 12%;
     top: 22%;
-    font-size: 21px;
-    animation-delay: 1.2s;
 }
 
-
-.s4 {
-    right: 30%;
-    top: 38%;
-    font-size: 15px;
-    animation-delay: 1.8s;
-}
-
-
-.s5 {
-    left: 70%;
-    top: 15%;
-    font-size: 18px;
-    animation-delay: .4s;
-}
-
-
-/* =====================================
-   CORAZONES DEL JARDÍN
-===================================== */
-
-.floatingHeart {
-
-    position: absolute;
-
-    color:
-        #ef9fbd;
-
-    pointer-events: none;
-
-    animation:
-        heartFloat
-        4s
-        ease-in-out
-        infinite;
-}
-
-
-.h1 {
-    left: 18%;
-    bottom: 35%;
-    font-size: 20px;
-}
-
-
-.h2 {
-    right: 15%;
-    bottom: 40%;
-    font-size: 24px;
-    animation-delay: 1s;
-}
-
-
-.h3 {
-    left: 40%;
-    bottom: 28%;
-    font-size: 18px;
-    animation-delay: 2s;
-}
-
-
-.h4 {
-    right: 38%;
-    bottom: 32%;
-    font-size: 20px;
+.b2 {
+    left: 27%;
+    top: 35%;
     animation-delay: .5s;
 }
 
+.b3 {
+    right: 18%;
+    top: 24%;
+    animation-delay: 1s;
+}
 
-/* =====================================
-   PASTO
-===================================== */
+.b4 {
+    right: 28%;
+    top: 38%;
+    animation-delay: 1.5s;
+}
 
-.grass {
+@keyframes brillar {
+    0%, 100% {
+        opacity: .4;
+        transform: scale(1);
+    }
 
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+.corazonJardin {
+    position: absolute;
+
+    color: #ec9fbd;
+
+    pointer-events: none;
+
+    animation: subir 4s ease-in-out infinite;
+}
+
+.cj1 {
+    left: 17%;
+    bottom: 35%;
+}
+
+.cj2 {
+    right: 15%;
+    bottom: 40%;
+    animation-delay: 1s;
+}
+
+.cj3 {
+    left: 40%;
+    bottom: 30%;
+    animation-delay: 2s;
+}
+
+@keyframes subir {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+.pasto {
     position: absolute;
 
     bottom: 0;
 
     width: 100%;
-
     height: 46%;
 
-    background:
-        #a9cc91;
+    background: #a6c88e;
 
-    border-top:
-        5px solid #789963;
+    border-top: 5px solid #789963;
 }
 
-
-/* =====================================
-   FLORES PEQUEÑAS
-===================================== */
-
-.smallFlower {
-
+.florPequena {
     position: absolute;
 
-    font-size: 30px;
+    font-size: 28px;
 
-    animation:
-        flowerFloat
-        3s
-        ease-in-out
-        infinite;
+    animation: florsita 3s ease-in-out infinite;
 }
 
-
-.sf1 {
+.fp1 {
     left: 8%;
-    bottom: 20%;
+    bottom: 19%;
 }
 
-
-.sf2 {
+.fp2 {
     right: 9%;
-    bottom: 23%;
-    animation-delay: .8s;
+    bottom: 22%;
+    animation-delay: .7s;
 }
 
-
-.sf3 {
-    left: 27%;
+.fp3 {
+    left: 28%;
     bottom: 12%;
     animation-delay: 1.3s;
 }
 
-
-.sf4 {
-    right: 27%;
+.fp4 {
+    right: 28%;
     bottom: 15%;
     animation-delay: 1.8s;
 }
 
+@keyframes florsita {
+    50% {
+        transform: translateY(-8px);
+    }
+}
 
-/* =====================================
+/* =========================
    FLOR INTERACTIVA
-===================================== */
+========================= */
 
-.bud {
-
+#flor {
     position: absolute;
 
-    width: 110px;
+    width: 120px;
+    height: 155px;
 
-    height: 150px;
+    left: 50%;
+    top: 63%;
+
+    transform: translate(-50%, -50%);
 
     cursor: pointer;
 
-    z-index: 8;
-
-    transform:
-        translate(-50%, -50%);
+    z-index: 20;
 
     transition:
-        left .55s ease,
-        top .55s ease;
+        left .6s ease,
+        top .6s ease;
 }
 
-
-.stem {
-
+.tallo {
     position: absolute;
 
-    width: 9px;
-
-    height: 80px;
-
+    left: 55px;
     bottom: 0;
 
-    left: 50%;
+    width: 9px;
+    height: 80px;
 
-    background:
-        #628d55;
-
-    transform:
-        translateX(-50%);
+    background: #638d55;
 
     border-radius: 5px;
 }
 
-
-.leaf {
-
+.hoja {
     position: absolute;
+
+    bottom: 20px;
 
     width: 45px;
+    height: 22px;
 
-    height: 21px;
+    background: #7ca966;
 
-    bottom: 22px;
+    border: 4px solid #56794a;
 
-    background:
-        #7ca966;
-
-    border:
-        4px solid #56794a;
-
-    border-radius:
-        100% 0 100% 0;
+    border-radius: 100% 0 100% 0;
 }
 
-
-.leafLeft {
-
-    left: 3px;
-
-    transform:
-        rotate(25deg);
+.hojaIzq {
+    left: 7px;
+    transform: rotate(25deg);
 }
 
-
-.leafRight {
-
-    right: 3px;
-
-    transform:
-        scaleX(-1)
-        rotate(25deg);
+.hojaDer {
+    right: 7px;
+    transform: scaleX(-1) rotate(25deg);
 }
 
-
-.petal {
-
+.petalo {
     position: absolute;
 
-    width: 42px;
+    top: 15px;
 
-    height: 72px;
-
-    top: 10px;
+    width: 43px;
+    height: 70px;
 
     background:
         linear-gradient(
             90deg,
             #c978a3,
-            #eea9c8
+            #efa9c9
         );
 
-    border:
-        4px solid #8b4d71;
+    border: 4px solid #8b4d71;
 
-    border-radius:
-        70% 70% 45% 45%;
+    border-radius: 70% 70% 45% 45%;
 
-    transition:
-        all .8s ease;
+    transition: .8s ease;
 }
 
-
-.petal.left {
-
-    left: 13px;
-
-    transform:
-        rotate(-25deg);
+.petaloIzq {
+    left: 14px;
+    transform: rotate(-25deg);
 }
 
-
-.petal.center {
-
-    left: 34px;
-
+.petaloCentro {
+    left: 39px;
     z-index: 3;
 }
 
-
-.petal.right {
-
-    right: 13px;
-
-    transform:
-        rotate(25deg);
+.petaloDer {
+    right: 14px;
+    transform: rotate(25deg);
 }
 
-
-.budTop {
-
+.capullo {
     position: absolute;
 
-    width: 48px;
+    left: 36px;
+    top: 7px;
 
-    height: 48px;
+    width: 49px;
+    height: 50px;
 
-    left: 31px;
+    background: #d985ae;
 
-    top: 2px;
+    border: 4px solid #8b4d71;
 
-    background:
-        #d985ae;
-
-    border:
-        4px solid #8b4d71;
-
-    border-radius:
-        50% 50% 40% 40%;
+    border-radius: 50% 50% 40% 40%;
 
     z-index: 5;
 
-    transition:
-        all .8s ease;
+    transition: .8s ease;
 }
 
-
-.flowerCore {
-
+.centroFlor {
     position: absolute;
 
-    width: 25px;
+    left: 47px;
+    top: 40px;
 
+    width: 25px;
     height: 25px;
 
-    left: 42px;
+    background: #ffd875;
 
-    top: 35px;
-
-    background:
-        #ffd875;
-
-    border:
-        4px solid #aa7833;
+    border: 4px solid #aa7833;
 
     border-radius: 50%;
 
@@ -1186,63 +738,43 @@ body {
 
     opacity: 0;
 
-    transition:
-        opacity .8s ease;
+    transition: .8s ease;
 }
 
+/* Flor abierta */
 
-/* =====================================
-   FLOR ABIERTA
-===================================== */
-
-.bud.blooming .budTop {
-
-    transform:
-        translateY(-35px)
-        scale(.6);
-
-    opacity: .2;
+#flor.abierta .capullo {
+    transform: translateY(-35px) scale(.6);
+    opacity: .15;
 }
 
-
-.bud.blooming .petal.left {
-
+#flor.abierta .petaloIzq {
     transform:
         rotate(-60deg)
         translate(-18px, -18px)
         scale(1.05);
 }
 
-
-.bud.blooming .petal.center {
-
+#flor.abierta .petaloCentro {
     transform:
         translateY(-28px)
         scale(1.12);
 }
 
-
-.bud.blooming .petal.right {
-
+#flor.abierta .petaloDer {
     transform:
         rotate(60deg)
         translate(18px, -18px)
         scale(1.05);
 }
 
-
-.bud.blooming .flowerCore {
-
+#flor.abierta .centroFlor {
     opacity: 1;
 }
 
+/* Contador */
 
-/* =====================================
-   CONTADOR
-===================================== */
-
-.counter {
-
+#contador {
     position: absolute;
 
     bottom: 25px;
@@ -1251,62 +783,46 @@ body {
 
     text-align: center;
 
-    color:
-        #76546b;
+    color: #76546b;
 
     font-size: 13px;
 
-    z-index: 9;
-
-    transition:
-        opacity .5s ease;
+    z-index: 25;
 }
 
-
-/* =====================================
+/* =========================
    MENSAJE FINAL
-===================================== */
+========================= */
 
-.finalMessage {
-
+#mensajeFinal {
     position: absolute;
 
     left: 50%;
-
     top: 50%;
 
-    width:
-        min(650px, 88vw);
+    width: min(650px, 88vw);
 
-    padding:
-        30px;
+    padding: 30px;
 
     transform:
         translate(-50%, -50%)
-        scale(.75);
+        scale(.7);
 
-    background:
-        rgba(255,244,249,.97);
+    background: rgba(255,244,249,.97);
 
-    border:
-        4px solid #a45c82;
+    border: 4px solid #a45c82;
 
     box-shadow:
-        0 0 30px
-        rgba(255,255,255,.95),
+        0 0 35px white,
+        10px 10px 0 rgba(96,65,111,.25);
 
-        10px 10px 0
-        rgba(96,65,111,.25);
-
-    color:
-        #60416f;
+    color: #60416f;
 
     text-align: center;
 
     line-height: 1.7;
 
-    font-size:
-        clamp(14px, 3vw, 19px);
+    font-size: clamp(14px, 3vw, 19px);
 
     font-weight: bold;
 
@@ -1314,16 +830,12 @@ body {
 
     pointer-events: none;
 
-    transition:
-        opacity 1.2s ease,
-        transform 1.2s ease;
+    transition: 1.2s ease;
 
-    z-index: 30;
+    z-index: 50;
 }
 
-
-.finalMessage.show {
-
+#mensajeFinal.visible {
     opacity: 1;
 
     transform:
@@ -1331,115 +843,25 @@ body {
         scale(1);
 }
 
+/* Partículas */
 
-/* =====================================
-   PARTÍCULAS
-===================================== */
-
-.magicParticle {
-
+.particula {
     position: absolute;
+
+    z-index: 45;
 
     pointer-events: none;
 
-    z-index: 25;
-
-    animation:
-        magic
-        1.5s
-        ease-out
-        forwards;
+    animation: magia 1.5s ease-out forwards;
 }
 
-
-/* =====================================
-   ANIMACIONES
-===================================== */
-
-@keyframes popupAppear {
-
+@keyframes magia {
     from {
-        transform:
-            scale(.85);
-
-        opacity: 0;
+        transform: translate(0,0) scale(1);
+        opacity: 1;
     }
 
     to {
-        transform:
-            scale(1);
-
-        opacity: 1;
-    }
-}
-
-
-@keyframes gardenFloat {
-
-    0%,
-    100% {
-        transform:
-            translateY(0)
-            scale(1);
-
-        opacity: .5;
-    }
-
-    50% {
-        transform:
-            translateY(-15px)
-            scale(1.3);
-
-        opacity: 1;
-    }
-}
-
-
-@keyframes heartFloat {
-
-    0%,
-    100% {
-        transform:
-            translateY(0);
-
-        opacity: .5;
-    }
-
-    50% {
-        transform:
-            translateY(-20px);
-
-        opacity: 1;
-    }
-}
-
-
-@keyframes flowerFloat {
-
-    0%,
-    100% {
-        transform:
-            translateY(0);
-    }
-
-    50% {
-        transform:
-            translateY(-8px);
-    }
-}
-
-
-@keyframes magic {
-
-    0% {
-        transform:
-            translate(0,0)
-            scale(1);
-
-        opacity: 1;
-    }
-
-    100% {
         transform:
             translate(var(--x), var(--y))
             scale(0);
@@ -1448,152 +870,76 @@ body {
     }
 }
 
-
-/* =====================================
-   CELULAR
-===================================== */
-
 @media (max-width: 500px) {
 
-    .finalMessage {
-
-        max-height: 65vh;
-
+    #mensajeFinal {
+        max-height: 70vh;
         overflow-y: auto;
-
         padding: 22px;
     }
-
 }
 
 </style>
-
 </head>
-
 
 <body>
 
+<!-- =========================
+     INICIO
+========================= -->
 
-<!-- =====================================
-     PANTALLA PRINCIPAL
-===================================== -->
+<div id="inicio">
 
-<div
-    class="main"
-    id="mainScreen"
->
+    <div class="decoracion corazon1">♡</div>
+    <div class="decoracion corazon2">♥</div>
+    <div class="decoracion corazon3">♡</div>
+    <div class="decoracion corazon4">♥</div>
 
+    <div class="decoracion estrella1">✦</div>
+    <div class="decoracion estrella2">✧</div>
+    <div class="decoracion estrella3">✦</div>
+    <div class="decoracion estrella4">✧</div>
 
-    <div class="mainDecoration heart1">
-        ♡
-    </div>
-
-
-    <div class="mainDecoration heart2">
-        ♥
-    </div>
-
-
-    <div class="mainDecoration heart3">
-        ♡
-    </div>
-
-
-    <div class="mainDecoration heart4">
-        ♥
-    </div>
-
-
-    <div class="mainDecoration star1">
-        ✦
-    </div>
-
-
-    <div class="mainDecoration star2">
-        ✧
-    </div>
-
-
-    <div class="mainDecoration star3">
-        ✦
-    </div>
-
-
-    <div class="mainDecoration star4">
-        ✧
-    </div>
-
-
-    <div class="title">
-
+    <div class="titulo">
         ✦ tengo algo para vos ✦
-
     </div>
 
-
-    <button
-        class="button"
-        id="openBtn"
-    >
-
+    <button id="botonTomi">
         ¡Tocame, Tomi!
-
     </button>
 
-
-    <div class="hint">
-
+    <div class="subtitulo">
         ♡ hay una sorpresita escondida acá ♡
-
     </div>
 
 </div>
 
 
-
-<!-- =====================================
+<!-- =========================
      PRIMER POPUP
-===================================== -->
+========================= -->
 
-<div
-    class="overlay"
-    id="overlay1"
->
-
+<div id="popup1" class="popupFondo">
 
     <div class="popup">
 
+        <div class="barra">
 
-        <div class="bar">
+            <span>💜 mensaje.exe</span>
 
-            <span>
-                💜 mensaje.exe
-            </span>
-
-
-            <button
-                class="close"
-                id="closeBtn1"
-            >
-
+            <button class="cerrar" id="cerrar1">
                 ×
-
             </button>
 
         </div>
 
+        <div class="contenido">
 
-        <div class="content">
-
-
-            <div class="tiny-heart">
-
+            <div class="corazonGrande">
                 💜
-
             </div>
 
-
-            <div class="message">
+            <div class="mensaje">
 
                 Aprendí a programar una página web
                 solo para decirte que sos el amor
@@ -1602,14 +948,11 @@ body {
 
             </div>
 
-
             <button
-                class="nextButton"
-                id="nextBtn1"
+                class="botonSiguiente"
+                id="siguiente1"
             >
-
                 ♡ Hay algo más... ♡
-
             </button>
 
         </div>
@@ -1619,104 +962,378 @@ body {
 </div>
 
 
-
-<!-- =====================================
+<!-- =========================
      SEGUNDO POPUP
-===================================== -->
+========================= -->
 
-<div
-    class="overlay"
-    id="overlay2"
->
-
+<div id="popup2" class="popupFondo">
 
     <div class="popup">
 
+        <div class="barra">
 
-        <div class="bar">
+            <span>💗 para vos.exe</span>
 
-            <span>
-                💗 para vos.exe
-            </span>
-
-
-            <button
-                class="close"
-                id="closeBtn2"
-            >
-
+            <button class="cerrar" id="cerrar2">
                 ×
-
             </button>
 
         </div>
 
+        <div class="contenido">
 
-        <div class="content">
+            <div class="kitty">
 
+                <div class="oreja orejaIzq"></div>
+                <div class="oreja orejaDer"></div>
 
-            <div class="kittyArea">
+                <div class="cabeza">
 
+                    <div class="ojo ojoIzq"></div>
+                    <div class="ojo ojoDer"></div>
 
-                <div class="kitty">
+                    <div class="nariz"></div>
 
-
-                    <div class="ear leftEar"></div>
-
-                    <div class="ear rightEar"></div>
-
-
-                    <div class="kittyHead">
-
-
-                        <div
-                            class="eye leftEye"
-                        ></div>
-
-
-                        <div
-                            class="eye rightEye"
-                        ></div>
-
-
-                        <div
-                            class="nose"
-                        ></div>
-
-
-                        <div
-                            class="bow leftBow"
-                        ></div>
-
-
-                        <div
-                            class="bow rightBow"
-                        ></div>
-
-
-                        <div
-                            class="bowCenter"
-                        ></div>
-
-                    </div>
-
-
-                    <div class="kittyBody"></div>
-
-
-                    <div class="paw leftPaw"></div>
-
-                    <div class="paw rightPaw"></div>
-
+                    <div class="moño"></div>
 
                 </div>
 
+                <div class="cuerpo"></div>
+
             </div>
 
-
-            <div
-                class="message secondMessage"
-            >
+            <div class="mensaje">
 
                 Quiero que sepas que estoy muy orgullosa
-               
+                de vos y que sé que van a venir muchas
+                cosas buenas.
+
+                <br><br>
+
+                Sos un hombre precioso en todos los sentidos,
+                y agradezco ser la mujer que te va a
+                acompañar para siempre.
+
+                <br><br>
+
+                No puedo pedir nada mejor en esta vida. 💗
+
+            </div>
+
+            <button
+                class="botonSiguiente"
+                id="siguiente2"
+            >
+                ♡ Quiero seguir... ♡
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     JARDÍN
+========================= -->
+
+<div id="jardin">
+
+    <div class="tituloJardin">
+        ✦ hay algo más que quiero decirte ✦
+    </div>
+
+    <div class="brillito b1">✦</div>
+    <div class="brillito b2">✧</div>
+    <div class="brillito b3">✦</div>
+    <div class="brillito b4">✧</div>
+
+    <div class="corazonJardin cj1">♡</div>
+    <div class="corazonJardin cj2">♥</div>
+    <div class="corazonJardin cj3">♡</div>
+
+    <div class="pasto"></div>
+
+    <div class="florPequena fp1">🌸</div>
+    <div class="florPequena fp2">🌷</div>
+    <div class="florPequena fp3">🌼</div>
+    <div class="florPequena fp4">🌸</div>
+
+
+    <!-- FLOR -->
+
+    <div id="flor">
+
+        <div class="tallo"></div>
+
+        <div class="hoja hojaIzq"></div>
+        <div class="hoja hojaDer"></div>
+
+        <div class="petalo petaloIzq"></div>
+        <div class="petalo petaloCentro"></div>
+        <div class="petalo petaloDer"></div>
+
+        <div class="capullo"></div>
+
+        <div class="centroFlor"></div>
+
+    </div>
+
+
+    <div id="contador">
+        ♡ encontralo... 0 / 5 ♡
+    </div>
+
+
+    <div id="mensajeFinal">
+
+        ✦ 💗 ✦
+
+        <br><br>
+
+        Haber coincidido con vos en esta vida
+        es lo que me hace sentir que el futuro
+        va a ser muy bonito juntos.
+
+        <br><br>
+
+        Nunca me imaginé con nadie,
+        pero vos viniste a romper eso.
+
+        <br><br>
+
+        Y te elijo, te elijo cada día,
+        cada hora, cada minuto,
+        cada segundo.
+
+        <br><br>
+
+        <strong>
+            Nosotros podemos ser todo.
+        </strong>
+
+        <br><br>
+
+        ♡ ✦ ♡ ✦ ♡
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   ELEMENTOS
+========================= */
+
+const botonTomi =
+    document.getElementById("botonTomi");
+
+const popup1 =
+    document.getElementById("popup1");
+
+const popup2 =
+    document.getElementById("popup2");
+
+const cerrar1 =
+    document.getElementById("cerrar1");
+
+const cerrar2 =
+    document.getElementById("cerrar2");
+
+const siguiente1 =
+    document.getElementById("siguiente1");
+
+const siguiente2 =
+    document.getElementById("siguiente2");
+
+const jardin =
+    document.getElementById("jardin");
+
+const flor =
+    document.getElementById("flor");
+
+const contador =
+    document.getElementById("contador");
+
+const mensajeFinal =
+    document.getElementById("mensajeFinal");
+
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
+botonTomi.onclick = function() {
+
+    popup1.classList.add("visible");
+
+};
+
+
+/* =========================
+   CERRAR POPUP 1
+========================= */
+
+cerrar1.onclick = function() {
+
+    popup1.classList.remove("visible");
+
+};
+
+
+/* =========================
+   PASAR AL POPUP 2
+========================= */
+
+siguiente1.onclick = function() {
+
+    popup1.classList.remove("visible");
+
+    popup2.classList.add("visible");
+
+};
+
+
+/* =========================
+   CERRAR POPUP 2
+========================= */
+
+cerrar2.onclick = function() {
+
+    popup2.classList.remove("visible");
+
+};
+
+
+/* =========================
+   IR AL JARDÍN
+========================= */
+
+siguiente2.onclick = function() {
+
+    popup2.classList.remove("visible");
+
+    jardin.classList.add("visible");
+
+};
+
+
+/* =========================
+   FLOR
+========================= */
+
+let toques = 0;
+
+const posiciones = [
+
+    ["50%", "63%"],
+    ["22%", "68%"],
+    ["77%", "58%"],
+    ["43%", "72%"],
+    ["78%", "70%"]
+
+];
+
+flor.style.left = posiciones[0][0];
+flor.style.top = posiciones[0][1];
+
+
+/* =========================
+   PARTÍCULAS
+========================= */
+
+function magia(numero) {
+
+    for (let i = 0; i < numero; i++) {
+
+        const p =
+            document.createElement("div");
+
+        p.className = "particula";
+
+        const simbolos =
+            ["✦", "✧", "♡", "♥"];
+
+        p.textContent =
+            simbolos[
+                Math.floor(
+                    Math.random() *
+                    simbolos.length
+                )
+            ];
+
+        p.style.left =
+            (flor.offsetLeft + 50) + "px";
+
+        p.style.top =
+            (flor.offsetTop + 50) + "px";
+
+        p.style.color =
+            ["#ffffff", "#ffd1e2", "#e9b6d1", "#d59be0"]
+            [
+                Math.floor(Math.random() * 4)
+            ];
+
+        p.style.fontSize =
+            (12 + Math.random() * 12) + "px";
+
+        p.style.setProperty(
+            "--x",
+            (Math.random() * 180 - 90) + "px"
+        );
+
+        p.style.setProperty(
+            "--y",
+            (Math.random() * -140 - 30) + "px"
+        );
+
+        jardin.appendChild(p);
+
+        setTimeout(function() {
+            p.remove();
+        }, 1600);
+    }
+}
+
+
+/* =========================
+   CLIC EN LA FLOR
+========================= */
+
+flor.onclick = function() {
+
+    toques++;
+
+
+    if (toques < 5) {
+
+        contador.textContent =
+            "♡ encontralo... "
+            + toques
+            + " / 5 ♡";
+
+        flor.style.left =
+            posiciones[toques][0];
+
+        flor.style.top =
+            posiciones[toques][1];
+
+        magia(10);
+
+    } else {
+
+        contador.textContent =
+            "✦ ✦ ✦";
+
+        magia(35);
+
+        flor.classList.add("abierta");
+
+        setTimeout(function() {
+
+            contador.style.opacity = "0";
+
+      
